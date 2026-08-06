@@ -32,13 +32,28 @@
 
 ## 部署
 
-純靜態網站，無建置步驟，可直接上傳至 GitHub Pages 或 Cloudflare Pages。
+已部署至 **Cloudflare Pages**：<https://taichung-forestry-coop.pages.dev/>
+
+純靜態網站，無建置步驟。部署指令：
+
+```bash
+# 建立專案（僅首次）
+wrangler pages project create taichung-forestry-coop --production-branch=main
+
+# 部署
+wrangler pages deploy . --project-name=taichung-forestry-coop --branch=main
+```
 
 ```bash
 # 於專案根目錄以本地伺服器預覽
 python -m http.server 8000
 ```
 
+## Git 管理
+
+本資料夾為獨立 git 儲存庫（分支 main）。資料夾位於父層 `portfolio-website` repo 路徑下，且被其 `.gitignore`（`/*/`）刻意忽略，請在此資料夾內直接使用 git 指令，勿在父層 add。
+
 ## 驗證
 
 已全端驗證：8 頁互連無死連結、所有圖片可載入、console 無錯誤、行動版選單正常。
+已全端 review 並修正：news 卡片行動版溢出（`.news-wide`）、課程表格窄螢幕橫向捲動（`.table-scroll`）、`og:image` 絕對 URL（指向 Cloudflare Pages）、相簿圖 `rel="noopener"`。
