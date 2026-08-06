@@ -1,0 +1,7 @@
+name = "taichung-forestry-coop"
+compatibility_date = "2026-06-08"
+pages_build_output_dir = "."
+
+[[kv_namespaces]]
+binding = "CONTENT"
+id = "e7183cd4cfca4dd99cd81df69ef569f9"

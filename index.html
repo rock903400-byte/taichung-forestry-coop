@@ -57,7 +57,7 @@
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">
       <img src="assets/avatar.jpg" alt="有限責任臺中市林業生產合作社標誌">
-      <span>臺中市林業生產合作社</span>
+      <span data-field="site.brand">臺中市林業生產合作社</span>
     </a>
     <button class="nav-toggle" aria-label="開啟選單">☰</button>
     <nav class="nav-links">
@@ -73,27 +73,27 @@
   </div>
 </header>
 
-<div class="hero" style="background-image:url('assets/photo-linying.jpg')">
+<div class="hero" data-field="index.hero.bg" data-bg style="background-image:url('assets/photo-linying.jpg')">
   <div class="hero-inner">
-    <span class="hero-kicker">有限責任臺中市林業生產合作社</span>
-    <h1 class="serif">頭嵙山・森活樂校<br>森林社會基地</h1>
+    <span class="hero-kicker" data-field="index.hero.kicker">有限責任臺中市林業生產合作社</span>
+    <h1 class="serif"><span data-field="index.hero.t1">頭嵙山・森活樂校</span><br><span data-field="index.hero.t2">森林社會基地</span></h1>
     <p class="hero-slogan serif">
-      傳承疏開精神，友好森林、有好香菇，<br>
-      執籽之手、<span class="mark">推動地球共好</span>。
+      <span data-field="index.hero.s1">傳承疏開精神，友好森林、有好香菇，</span><br>
+      執籽之手、<span class="mark" data-field="index.hero.s2">推動地球共好</span>。
     </p>
     <div class="hero-actions">
-      <a class="btn btn-follow" href="about.html">認識我們</a>
-      <a class="btn btn-msg" href="contact.html">聯絡我們</a>
+      <a class="btn btn-follow" data-field="index.hero.btn1" href="about.html">認識我們</a>
+      <a class="btn btn-msg" data-field="index.hero.btn2" href="contact.html">聯絡我們</a>
     </div>
   </div>
 </div>
 
 <div class="stats">
   <div class="container stats-inner">
-    <div><b>2018</b><span>合作社設立</span></div>
-    <div><b>82481842</b><span>合作社統一編號</span></div>
-    <div><b>全台第一座</b><span>森林療育社會基地</span></div>
-    <div><b>段木香菇</b><span>林下經濟</span></div>
+    <div><b data-field="index.stats.0.b">2018</b><span data-field="index.stats.0.s">合作社設立</span></div>
+    <div><b data-field="index.stats.1.b">82481842</b><span data-field="index.stats.1.s">合作社統一編號</span></div>
+    <div><b data-field="index.stats.2.b">全台第一座</b><span data-field="index.stats.2.s">森林療育社會基地</span></div>
+    <div><b data-field="index.stats.3.b">段木香菇</b><span data-field="index.stats.3.s">林下經濟</span></div>
   </div>
 </div>
 
@@ -101,24 +101,24 @@
   <div class="container">
     <div class="section-head">
       <span class="section-kicker">OUR SPIRIT</span>
-      <h2 class="section-title serif">我們的精神</h2>
-      <p class="section-desc">從森林出發，以人為本，讓山林、農民與社區一起共好。</p>
+      <h2 class="section-title serif" data-field="index.spirit.title">我們的精神</h2>
+      <p class="section-desc" data-field="index.spirit.desc">從森林出發，以人為本，讓山林、農民與社區一起共好。</p>
     </div>
     <div class="grid grid-3">
       <div class="card">
-        <div class="card-icon">🌲</div>
-        <h3>友好森林</h3>
-        <p>以友善方式經營森林，攜手林農一同種樹，協助林農生產、加工及製造農特產品，守護淺山生態與臺灣森林木資源。</p>
+        <div class="card-icon" data-field="index.spirit.items.0.icon">🌲</div>
+        <h3 data-field="index.spirit.items.0.title">友好森林</h3>
+        <p data-field="index.spirit.items.0.body">以友善方式經營森林，攜手林農一同種樹，協助林農生產、加工及製造農特產品，守護淺山生態與臺灣森林木資源。</p>
       </div>
       <div class="card">
-        <div class="card-icon">🍄</div>
-        <h3>有好香菇</h3>
-        <p>發展林下經濟與段木香菇等森林副產物，讓林農在山林間有安身立命的生活與生計。</p>
+        <div class="card-icon" data-field="index.spirit.items.1.icon">🍄</div>
+        <h3 data-field="index.spirit.items.1.title">有好香菇</h3>
+        <p data-field="index.spirit.items.1.body">發展林下經濟與段木香菇等森林副產物，讓林農在山林間有安身立命的生活與生計。</p>
       </div>
       <div class="card">
-        <div class="card-icon">🌍</div>
-        <h3>與地球共好</h3>
-        <p>推廣永續發展理念，減少碳足跡，落實碳中和，恢復淺山山脈與社區共好，為下一代留下更健康的環境。</p>
+        <div class="card-icon" data-field="index.spirit.items.2.icon">🌍</div>
+        <h3 data-field="index.spirit.items.2.title">與地球共好</h3>
+        <p data-field="index.spirit.items.2.body">推廣永續發展理念，減少碳足跡，落實碳中和，恢復淺山山脈與社區共好，為下一代留下更健康的環境。</p>
       </div>
     </div>
   </div>
@@ -128,49 +128,49 @@
   <div class="container">
     <div class="section-head">
       <span class="section-kicker">NEWS</span>
-      <h2 class="section-title serif">最新消息</h2>
-      <p class="section-desc">掌握合作社的第一手活動與永續行動訊息。</p>
+      <h2 class="section-title serif" data-field="index.news.title">最新消息</h2>
+      <p class="section-desc" data-field="index.news.desc">掌握合作社的第一手活動與永續行動訊息。</p>
     </div>
     <div class="news-grid">
-      <a class="news-card" href="news.html#action-2025">
+      <a class="news-card" data-field="index.news.cards.0" href="news.html#action-2025">
         <div class="news-thumb">
-          <img src="assets/photo-tuku1.jpg" alt="2025 換土種土永續行動">
-          <span class="news-tag">永續行動</span>
+          <img data-field="index.news.cards.0.img" src="assets/photo-tuku1.jpg" alt="2025 換土種土永續行動">
+          <span class="news-tag" data-field="index.news.cards.0.tag">永續行動</span>
         </div>
         <div class="news-body">
-          <div class="news-date">2025 年 7 月 12 日</div>
-          <h3>2025「換土＋種土」永續行動，邀請您一起來友善地球</h3>
-          <p>土壤對「碳中和」扮演重要角色！開放民眾與社區無料自取，請上網填寫表單報名唷！</p>
-          <span class="news-link">閱讀更多 →</span>
+          <div class="news-date" data-field="index.news.cards.0.date">2025 年 7 月 12 日</div>
+          <h3 data-field="index.news.cards.0.title">2025「換土＋種土」永續行動，邀請您一起來友善地球</h3>
+          <p data-field="index.news.cards.0.body">土壤對「碳中和」扮演重要角色！開放民眾與社區無料自取，請上網填寫表單報名唷！</p>
+          <span class="news-link" data-field="index.news.cards.0.link_text">閱讀更多 →</span>
         </div>
       </a>
-      <a class="news-card" href="news.html#school">
+      <a class="news-card" data-field="index.news.cards.1" href="news.html#school">
         <div class="news-thumb">
-          <img src="assets/photo-linying.jpg" alt="頭嵙山森活樂校森林社會基地">
-          <span class="news-tag">基地啟航</span>
+          <img data-field="index.news.cards.1.img" src="assets/photo-linying.jpg" alt="頭嵙山森活樂校森林社會基地">
+          <span class="news-tag" data-field="index.news.cards.1.tag">基地啟航</span>
         </div>
         <div class="news-body">
-          <div class="news-date">2024 年 2 月 27 日</div>
-          <h3>全台第一座森林療育社會基地，頭嵙山・森活樂校正式啟航</h3>
-          <p>以友好森林為宗旨，促進山區就業機會，推廣永續發展理念，恢復淺山山脈與社區共好。</p>
-          <span class="news-link">觀看媒體報導 →</span>
+          <div class="news-date" data-field="index.news.cards.1.date">2024 年 2 月 27 日</div>
+          <h3 data-field="index.news.cards.1.title">全台第一座森林療育社會基地，頭嵙山・森活樂校正式啟航</h3>
+          <p data-field="index.news.cards.1.body">以友好森林為宗旨，促進山區就業機會，推廣永續發展理念，恢復淺山山脈與社區共好。</p>
+          <span class="news-link" data-field="index.news.cards.1.link_text">觀看媒體報導 →</span>
         </div>
       </a>
-      <a class="news-card" href="courses.html">
+      <a class="news-card" data-field="index.news.cards.2" href="courses.html">
         <div class="news-thumb">
-          <img src="assets/photo-diaozhi.jpg" alt="森林安全小教室">
-          <span class="news-tag">研習課程</span>
+          <img data-field="index.news.cards.2.img" src="assets/photo-diaozhi.jpg" alt="森林安全小教室">
+          <span class="news-tag" data-field="index.news.cards.2.tag">研習課程</span>
         </div>
         <div class="news-body">
-          <div class="news-date">115 年度</div>
-          <h3>林業碳匯、林下經濟研習課程開跑</h3>
-          <p>為協助林農社員掌握林產業發展、森林經營、碳匯政策及永續趨勢，研習課程陸續開課。</p>
-          <span class="news-link">查看課程表 →</span>
+          <div class="news-date" data-field="index.news.cards.2.date">115 年度</div>
+          <h3 data-field="index.news.cards.2.title">林業碳匯、林下經濟研習課程開跑</h3>
+          <p data-field="index.news.cards.2.body">為協助林農社員掌握林產業發展、森林經營、碳匯政策及永續趨勢，研習課程陸續開課。</p>
+          <span class="news-link" data-field="index.news.cards.2.link_text">查看課程表 →</span>
         </div>
       </a>
     </div>
     <div style="text-align:center;margin-top:32px">
-      <a class="btn btn-outline" href="news.html">查看全部消息</a>
+      <a class="btn btn-outline" data-field="index.news.more" href="news.html">查看全部消息</a>
     </div>
   </div>
 </section>
@@ -179,19 +179,19 @@
   <div class="container">
     <div class="school-wrap">
       <div>
-        <span class="section-kicker">森活樂校</span>
-        <h2 class="section-title serif" style="margin-bottom:12px">頭嵙山・森活樂校 森林社會基地</h2>
-        <p class="section-desc" style="text-align:left">全台第一座森林療育社會基地 ── 森林之前，先有人。</p>
-        <p style="margin-top:16px;color:var(--ink-soft)">
+        <span class="section-kicker" data-field="index.school.kicker">森活樂校</span>
+        <h2 class="section-title serif" style="margin-bottom:12px" data-field="index.school.title">頭嵙山・森活樂校 森林社會基地</h2>
+        <p class="section-desc" style="text-align:left" data-field="index.school.desc">全台第一座森林療育社會基地 ── 森林之前，先有人。</p>
+        <p style="margin-top:16px;color:var(--ink-soft)" data-field="index.school.body">
           本社經營來到第七年，發現解決森林經營的根本問題，「人、生活」才是根本。
           主席與總監於 2024 年初推動成立「頭嵙山・森活樂校森林社會基地」，促進山區就業機會，
           並以「城食森林」為核心理念，推廣永續發展與森林療育體驗。
         </p>
-        <a class="video-link" href="school.html">了解更多森活樂校 →</a>
+        <a class="video-link" data-field="index.school.link" href="school.html">了解更多森活樂校 →</a>
       </div>
       <figure class="school-figure">
-        <img src="assets/photo-linying.jpg" alt="頭嵙山森活樂校森林社會基地">
-        <figcaption class="school-caption">豐盟新聞 1130227（新社區）頭嵙山森活樂校 社會基地推動青銀培力</figcaption>
+        <img data-field="index.school.img" src="assets/photo-linying.jpg" alt="頭嵙山森活樂校森林社會基地">
+        <figcaption class="school-caption" data-field="index.school.caption">豐盟新聞 1130227（新社區）頭嵙山森活樂校 社會基地推動青銀培力</figcaption>
       </figure>
     </div>
   </div>
@@ -201,25 +201,25 @@
   <div class="container">
     <div class="section-head">
       <span class="section-kicker">永續行動</span>
-      <h2 class="section-title serif">2025「換土＋種土」永續行動</h2>
-      <p class="section-desc">邀請您一起來友善地球！土壤對「碳中和」扮演重要角色。</p>
+      <h2 class="section-title serif" data-field="index.action.title">2025「換土＋種土」永續行動</h2>
+      <p class="section-desc" data-field="index.action.desc">邀請您一起來友善地球！土壤對「碳中和」扮演重要角色。</p>
     </div>
     <div class="action-banner">
       <div>
-        <h3>🌎🌏🌍 「換土」＋「種土」，減緩極端氣候</h3>
-        <p>土壤對「碳中和」扮演重要角色！如何發揮土壤功能，扮演拯救地球「發燒」的關鍵角色？讓我們個人、社區一起來吧！</p>
-        <p style="margin-top:10px;font-weight:700">開放民眾與社區無料自取，請上網填寫表單報名唷！</p>
+        <h3 data-field="index.action.h3">🌎🌏🌍 「換土」＋「種土」，減緩極端氣候</h3>
+        <p data-field="index.action.p1">土壤對「碳中和」扮演重要角色！如何發揮土壤功能，扮演拯救地球「發燒」的關鍵角色？讓我們個人、社區一起來吧！</p>
+        <p style="margin-top:10px;font-weight:700" data-field="index.action.p2">開放民眾與社區無料自取，請上網填寫表單報名唷！</p>
         <div class="hash-list">
-          <span>#純臺灣森林木培土</span>
-          <span>#2025永續行動台中林業</span>
-          <span>#開放日首度自載免費</span>
-          <span>#配合換土固碳需參與追蹤回饋</span>
+          <span data-field="index.action.hashes.0">#純臺灣森林木培土</span>
+          <span data-field="index.action.hashes.1">#2025永續行動台中林業</span>
+          <span data-field="index.action.hashes.2">#開放日首度自載免費</span>
+          <span data-field="index.action.hashes.3">#配合換土固碳需參與追蹤回饋</span>
         </div>
       </div>
       <div class="action-form">
-        <b>臺中林業2025『換土 』永續行動<br>社會社團50+ 企業ESG100+</b>
-        <a class="btn btn-leaf" href="https://forms.gle/d4V9sFtKD93yFCoJ9" target="_blank" rel="noopener">立即填寫報名表單</a>
-        <p style="font-size:.78rem;color:var(--ink-soft);margin-top:10px">forms.gle/d4V9sFtKD93yFCoJ9</p>
+        <b data-field="index.action.form.b">臺中林業2025『換土 』永續行動<br>社會社團50+ 企業ESG100+</b>
+        <a class="btn btn-leaf" data-field="index.action.form.btn" href="https://forms.gle/d4V9sFtKD93yFCoJ9" target="_blank" rel="noopener">立即填寫報名表單</a>
+        <p style="font-size:.78rem;color:var(--ink-soft);margin-top:10px" data-field="index.action.form.hint">forms.gle/d4V9sFtKD93yFCoJ9</p>
       </div>
     </div>
   </div>
@@ -229,36 +229,36 @@
   <div class="container">
     <div class="section-head">
       <span class="section-kicker">聯絡我們</span>
-      <h2 class="section-title serif">與我們聯繫</h2>
-      <p class="section-desc">歡迎透過以下方式聯繫臺中市林業生產合作社・森活樂校。</p>
+      <h2 class="section-title serif" data-field="index.contact.title">與我們聯繫</h2>
+      <p class="section-desc" data-field="index.contact.desc">歡迎透過以下方式聯繫臺中市林業生產合作社・森活樂校。</p>
     </div>
     <div class="contact-grid">
       <div class="contact-item">
-        <div class="ci">📍</div>
-        <b>地址</b>
-        <span>臺中市新社區協中街 257 號</span>
+        <div class="ci" data-field="index.contact.items.0.icon">📍</div>
+        <b data-field="index.contact.items.0.label">地址</b>
+        <span data-field="index.contact.items.0.value">臺中市新社區協中街 257 號</span>
       </div>
       <div class="contact-item">
-        <div class="ci">📞</div>
-        <b>電話</b>
-        <a href="tel:+886425823099">04-2582-3099</a>
-        <br><small style="color:#cfe5d8">課程報名：0901-038-016</small>
+        <div class="ci" data-field="index.contact.items.1.icon">📞</div>
+        <b data-field="index.contact.items.1.label">電話</b>
+        <a href="tel:+886425823099" data-field="index.contact.items.1.value">04-2582-3099</a>
+        <br><small style="color:#cfe5d8" data-field="index.contact.items.1.value2">課程報名：0901-038-016</small>
       </div>
       <div class="contact-item">
-        <div class="ci">✉️</div>
-        <b>Email</b>
-        <a href="mailto:tfpc168999@gmail.com">tfpc168999@gmail.com</a>
+        <div class="ci" data-field="index.contact.items.2.icon">✉️</div>
+        <b data-field="index.contact.items.2.label">Email</b>
+        <a href="mailto:tfpc168999@gmail.com" data-field="index.contact.items.2.value">tfpc168999@gmail.com</a>
       </div>
       <div class="contact-item">
-        <div class="ci">💬</div>
-        <b>Messenger</b>
-        <a href="https://m.me/100063535766973" target="_blank" rel="noopener">m.me/100063535766973</a>
+        <div class="ci" data-field="index.contact.items.3.icon">💬</div>
+        <b data-field="index.contact.items.3.label">Messenger</b>
+        <a href="https://m.me/100063535766973" target="_blank" rel="noopener" data-field="index.contact.items.3.value">m.me/100063535766973</a>
       </div>
     </div>
     <div style="text-align:center;margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a class="btn btn-msg" href="https://www.facebook.com/profile.php?id=100063535766973" target="_blank" rel="noopener">Facebook 粉絲專頁</a>
-      <a class="btn btn-msg" href="https://si.taiwan.gov.tw/Home/Org?Fid=605" target="_blank" rel="noopener">合作社登記查詢</a>
-      <a class="btn btn-msg" href="https://forms.gle/d4V9sFtKD93yFCoJ9" target="_blank" rel="noopener">報名表單</a>
+      <a class="btn btn-msg" data-field="index.contact.btns.0" href="https://www.facebook.com/profile.php?id=100063535766973" target="_blank" rel="noopener">Facebook 粉絲專頁</a>
+      <a class="btn btn-msg" data-field="index.contact.btns.1" href="https://si.taiwan.gov.tw/Home/Org?Fid=605" target="_blank" rel="noopener">合作社登記查詢</a>
+      <a class="btn btn-msg" data-field="index.contact.btns.2" href="https://forms.gle/d4V9sFtKD93yFCoJ9" target="_blank" rel="noopener">報名表單</a>
     </div>
   </div>
 </section>
@@ -267,8 +267,8 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <b>有限責任臺中市林業生產合作社</b>
-        <p>友好森林・友善社會・與地球共好</p>
+        <b data-field="site.footer_brand">有限責任臺中市林業生產合作社</b>
+        <p data-field="site.footer_slogan">友好森林・友善社會・與地球共好</p>
         <p style="font-size:.8rem;margin-top:10px">統一編號 82481842<br>臺中市新社區協中街 257 號</p>
       </div>
       <div>
@@ -286,12 +286,13 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 有限責任臺中市林業生產合作社・本網站資料整理自 Facebook 粉絲專頁與公開資訊</span>
-      <span>友好森林・友善社會・與地球共好</span>
+      <span data-field="site.footer_note">© 有限責任臺中市林業生產合作社・本網站資料整理自 Facebook 粉絲專頁與公開資訊</span>
+      <span data-field="site.footer_note2">友好森林・友善社會・與地球共好</span>
     </div>
   </div>
 </footer>
 
 <script src="assets/js/main.js"></script>
+<script src="assets/js/content.js"></script>
 </body>
 </html>
