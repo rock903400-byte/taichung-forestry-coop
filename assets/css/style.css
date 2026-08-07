@@ -122,8 +122,8 @@ section{padding:64px 0}
 }
 .news-card:hover{transform:translateY(-4px)}
 .news-wide{display:grid;grid-template-columns:340px 1fr;margin-bottom:28px}
-.news-thumb{position:relative;height:190px;overflow:hidden}
-.news-thumb img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.news-thumb{position:relative;overflow:hidden}
+.news-thumb img{width:100%;height:auto;object-fit:cover;transition:.4s;display:block}
 .news-card:hover .news-thumb img{transform:scale(1.06)}
 .news-tag{
   position:absolute;top:12px;left:12px;background:var(--green-600);color:#fff;
@@ -162,7 +162,7 @@ section{padding:64px 0}
 
 .school-wrap{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
 .school-figure{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
-.school-figure img{width:100%;height:340px;object-fit:cover}
+.school-figure img{width:100%;height:auto;object-fit:cover;display:block}
 .school-caption{background:var(--green-900);color:#d7e8dd;padding:10px 16px;font-size:.85rem}
 .school-list{list-style:none;margin-top:14px}
 .school-list li{
@@ -205,7 +205,7 @@ section{padding:64px 0}
 
 .safety-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .safety-card{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
-.safety-card img{width:100%;height:280px;object-fit:cover;transition:.4s}
+.safety-card img{width:100%;height:auto;object-fit:cover;transition:.4s;display:block}
 .safety-card:hover img{transform:scale(1.04)}
 .safety-overlay{
   position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;
@@ -216,10 +216,10 @@ section{padding:64px 0}
 
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .gallery a{
-  position:relative;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:1;
+  position:relative;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);
   display:block;background:var(--green-100);
 }
-.gallery img{width:100%;height:100%;object-fit:cover;transition:.35s}
+.gallery img{width:100%;height:auto;object-fit:cover;transition:.35s;display:block}
 .gallery a:hover img{transform:scale(1.08)}
 .gallery a::after{
   content:attr(data-cap);position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;
