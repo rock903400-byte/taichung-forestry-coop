@@ -1,2 +1,7 @@
 .wrangler/
 .dev.vars
+
+# 後端（Cloudflare Pages Functions）不公開
+/functions/
+/wrangler.toml
+/data/
