@@ -1,21 +1,8 @@
 import { json, getToken, tokenValid } from "../_lib.js";
+import DEFAULT_CONTENT from "../../data/content.json";
 
 export async function onRequestGet(context) {
-  try {
-    const stored = await context.env.CONTENT.get("content");
-    if (stored) {
-      return json(JSON.parse(stored));
-    }
-    const fallback = await context.env.ASSETS.fetch(
-      new URL("/data/content.json", context.request.url).toString()
-    );
-    if (fallback.ok) {
-      return json(await fallback.json());
-    }
-    return json({ error: "內容尚未初始化" }, 404);
-  } catch (e) {
-    return json({ error: "讀取失敗" }, 500);
-  }
+  return json(DEFAULT_CONTENT);
 }
 
 export async function onRequestPut(context) {
