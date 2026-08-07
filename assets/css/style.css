@@ -312,8 +312,12 @@ section{padding:64px 0}
     box-shadow:var(--shadow);
   }
   .nav-links.open{display:flex}
-  .nav-links a{padding:10px 8px;font-size:1rem}
-  .nav-toggle{display:block}
+  .nav-links a{padding:12px 8px;font-size:1rem}
+  .nav-toggle{display:block;min-height:46px;padding:8px 14px}
+  .btn{min-height:48px;padding:12px 22px}
+  .page-hero{padding:28px 0 22px}
+  .page-hero h1{font-size:1.5rem}
+  .page-hero .sub{font-size:.92rem}
   .hero{min-height:440px}
   .hero h1{font-size:1.6rem}
   .hero-inner{padding:70px 20px 90px}
@@ -322,6 +326,12 @@ section{padding:64px 0}
   .news-grid,.gallery,.video-grid,.step-flow{grid-template-columns:1fr}
   .stats-inner{grid-template-columns:1fr 1fr}
   .footer-grid{grid-template-columns:1fr}
-  .course-table{font-size:.8rem}
+  .course-table{font-size:.78rem}
+  .course-table th,.course-table td{padding:10px}
   .map-frame iframe{height:280px}
+}
+@media (max-width:400px){
+  .hero h1{font-size:1.4rem}
+  .hero-slogan{font-size:1rem}
+  section{padding:44px 0}
 }
