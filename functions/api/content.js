@@ -2,7 +2,9 @@ import { json, getToken, tokenValid } from "../_lib.js";
 import DEFAULT_CONTENT from "../../data/content.json";
 
 export async function onRequestGet(context) {
-  return json(DEFAULT_CONTENT);
+  const res = json(DEFAULT_CONTENT);
+  res.headers.set("X-Fn-Src", "import-v2");
+  return res;
 }
 
 export async function onRequestPut(context) {
