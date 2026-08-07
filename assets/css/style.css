@@ -41,8 +41,15 @@ a{color:var(--green-700);text-decoration:none;transition:.2s}
 .nav-links a.active{background:var(--green-700);color:#fff;font-weight:700}
 .nav-toggle{
   display:none;margin-left:auto;background:none;border:1px solid var(--line);
-  border-radius:8px;padding:6px 10px;font-size:1.1rem;cursor:pointer;color:var(--green-700);
+  border-radius:8px;padding:6px 10px;cursor:pointer;color:var(--green-700);
+  align-items:center;justify-content:center;
 }
+.nav-toggle .toggle-bar{display:block;width:20px;height:2px;background:currentColor;border-radius:2px;position:relative;margin:0 auto}
+.nav-toggle .toggle-bar::before,.nav-toggle .toggle-bar::after{
+  content:"";position:absolute;left:0;right:0;height:2px;background:currentColor;border-radius:2px;
+}
+.nav-toggle .toggle-bar::before{top:-6px}
+.nav-toggle .toggle-bar::after{top:6px}
 
 .page-hero{
   background:linear-gradient(135deg,var(--green-800),var(--green-900));
@@ -318,12 +325,12 @@ section{padding:64px 0}
   .page-hero{padding:28px 0 22px}
   .page-hero h1{font-size:1.5rem}
   .page-hero .sub{font-size:.92rem}
-  .hero{min-height:440px}
+  .hero{min-height:400px;background-image:linear-gradient(135deg,var(--green-800),var(--green-900)) !important}
   .hero h1{font-size:1.6rem}
   .hero-inner{padding:70px 20px 90px}
   section{padding:48px 0}
   .section-title{font-size:1.4rem}
-  .news-grid,.gallery,.video-grid,.step-flow{grid-template-columns:1fr}
+  .grid-3,.news-grid,.gallery,.video-grid,.step-flow{grid-template-columns:1fr}
   .stats-inner{grid-template-columns:1fr 1fr}
   .footer-grid{grid-template-columns:1fr}
   .course-table{font-size:.78rem}
