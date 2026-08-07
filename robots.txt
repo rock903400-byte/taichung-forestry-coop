@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+
+Sitemap: https://rock903400-byte.github.io/taichung-forestry-coop/sitemap.xml
