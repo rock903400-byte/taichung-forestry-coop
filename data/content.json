@@ -32,6 +32,27 @@
         { "icon": "🌍", "title": "與地球共好", "body": "推廣永續發展理念，減少碳足跡，落實碳中和，恢復淺山山脈與社區共好，為下一代留下更健康的環境。" }
       ]
     },
+    "services": {
+      "kicker": "產品與服務",
+      "title": "從森林到生活，合作社多元服務",
+      "desc": "以疏開精神經營森林，發展林下經濟與療育體驗，讓山林與人共好。",
+      "items": [
+        { "icon": "🌲", "title": "森林經營服務", "body": "攜手林農造林、撫育與疏開間伐，推動國有林造林撫育實作與森林永續經營。", "href": "about.html" },
+        { "icon": "🍄", "title": "林下經濟發展", "body": "段木香菇、林下養蜂與森林副產物，協助林農生產、加工及製造農特產品。", "href": "courses.html" },
+        { "icon": "🌿", "title": "森活樂校・體驗教育", "body": "森林療育與綠色療癒體驗、志工培力與課程研習，森林之前，先有人。", "href": "school.html" }
+      ]
+    },
+    "journey": {
+      "kicker": "參與旅程",
+      "title": "四步走進森林共好",
+      "desc": "從認識到參與，讓我們一起與森林、與社區建立連結。",
+      "items": [
+        { "icon": "👋", "title": "認識我們", "body": "瀏覽官網與 Facebook 粉專，深入了解合作社與森活樂校。", "href": "about.html" },
+        { "icon": "💬", "title": "聯絡諮詢", "body": "透過電話、Email 或 Messenger 與我們聯繫。", "href": "contact.html" },
+        { "icon": "🧑‍🌾", "title": "參與行動", "body": "報名研習課程、療育體驗或「換土＋種土」永續行動。", "href": "courses.html" },
+        { "icon": "📣", "title": "追蹤粉專", "body": "按讚追蹤，隨時掌握最新活動與森林訊息。", "href": "https://www.facebook.com/profile.php?id=100063535766973" }
+      ]
+    },
     "news": {
       "title": "最新消息",
       "desc": "掌握合作社的第一手活動與永續行動訊息。",

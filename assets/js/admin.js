@@ -43,6 +43,26 @@
         { key: "title", label: "標題" },
         { key: "body", type: "textarea", label: "內文" }
       ]}},
+      { label: "產品與服務（首頁三項服務）", fields: [
+        { key: "services.kicker", label: "標籤" },
+        { key: "services.title", label: "區塊標題" },
+        { key: "services.desc", label: "區塊說明" }
+      ], list: { key: "services.items", itemFields: [
+        { key: "icon", label: "圖示（Emoji）" },
+        { key: "title", label: "標題" },
+        { key: "body", type: "textarea", label: "內文" },
+        { key: "href", label: "點擊後的網址" }
+      ]}},
+      { label: "參與旅程（4 步驟）", fields: [
+        { key: "journey.kicker", label: "標籤" },
+        { key: "journey.title", label: "區塊標題" },
+        { key: "journey.desc", label: "區塊說明" }
+      ], list: { key: "journey.items", itemFields: [
+        { key: "icon", label: "圖示（Emoji）" },
+        { key: "title", label: "標題" },
+        { key: "body", type: "textarea", label: "內文" },
+        { key: "href", label: "點擊後的網址" }
+      ]}},
       { label: "最新消息（首頁 3 張卡片）", fields: [
         { key: "news.title", label: "區塊標題" },
         { key: "news.desc", label: "區塊說明" }
@@ -275,6 +295,32 @@
   }
   function getAt(path) {
     return path.split(".").reduce(function (o, k) { return o == null ? undefined : o[k]; }, content);
+  }
+
+  function mergeDefaults(base, over) {
+    var out = {};
+    for (var k in base) {
+      if (!Object.prototype.hasOwnProperty.call(base, k)) continue;
+      var b = base[k];
+      var o = over[k];
+      if (Array.isArray(b)) out[k] = Array.isArray(o) ? o : b;
+      else if (b && typeof b === "object" && o && typeof o === "object" && !Array.isArray(o)) out[k] = mergeDefaults(b, o);
+      else out[k] = o !== undefined ? o : b;
+    }
+    for (var k2 in over) {
+      if (!Object.prototype.hasOwnProperty.call(base, k2)) out[k2] = over[k2];
+    }
+    return out;
+  }
+
+  function loadContent() {
+    return Promise.all([
+      api("/api/content"),
+      fetch("data/content.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; })
+    ]).then(function (rs) {
+      content = mergeDefaults(rs[1] || {}, rs[0] || {});
+      return content;
+    });
   }
 
   function api(url, opts) {
@@ -589,10 +635,9 @@
     if (!TOKEN) return;
     api("/api/auth")
       .then(function () {
-        return Promise.all([api("/api/content"), api("/api/upload")]);
+        return Promise.all([loadContent(), api("/api/upload")]);
       })
       .then(function (r) {
-        content = r[0];
         uploads = r[1] || [];
         enterApp();
       })
@@ -609,10 +654,9 @@
       .then(function (r) {
         TOKEN = r.token;
         localStorage.setItem("tfpc_token", TOKEN);
-        return Promise.all([api("/api/content"), api("/api/upload")]);
+        return Promise.all([loadContent(), api("/api/upload")]);
       })
       .then(function (r) {
-        content = r[0];
         uploads = r[1] || [];
         enterApp();
       })

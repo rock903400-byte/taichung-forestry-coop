@@ -57,8 +57,25 @@
     }
   }
 
+  var warnShown = false;
+  function showContentWarn() {
+    if (warnShown || document.getElementById("content-warn")) return;
+    warnShown = true;
+    var el = document.createElement("div");
+    el.id = "content-warn";
+    el.className = "content-warn";
+    el.textContent = "資料載入中，若長時間無回應請聯繫 04-2582-3099 或 Messenger。";
+    document.body.appendChild(el);
+    setTimeout(function () {
+      el.classList.add("hide");
+      setTimeout(function () { el.remove(); }, 800);
+    }, 8000);
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
-    fetch("/api/content", { cache: "no-store" })
+    var ctrl = new AbortController();
+    var timer = setTimeout(function () { ctrl.abort(); }, 8000);
+    fetch("/api/content", { cache: "no-store", signal: ctrl.signal })
       .then(function (res) {
         if (!res.ok) throw new Error("no content api");
         return res.json();
@@ -68,6 +85,7 @@
           apply(el, getByPath(data, el.getAttribute("data-field")));
         });
       })
-      .catch(function () {});
+      .catch(function () { showContentWarn(); })
+      .finally(function () { clearTimeout(timer); });
   });
 })();
